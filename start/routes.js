@@ -27,4 +27,7 @@ Route.group(() => {
   Route.delete('/delete/offer', 'OfferController.delete').middleware('auth')
   Route.delete('/delete/user', 'UserController.delete')
   Route.post('/login', 'UserController.login')
+  Route.patch('/update/client', 'ClientController.update')
+  Route.patch('/update/offer', 'OfferController.update').middleware('auth')
+  Route.patch('/update/user', 'UserController.update')
 }).prefix('/api/v1')
